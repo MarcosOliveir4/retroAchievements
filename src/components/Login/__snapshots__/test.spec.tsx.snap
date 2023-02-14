@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> should render the heading 1`] = `
+.c0 {
+  background-color: var(--background);
+  color: #fff;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.c1 {
+  background-color: var(--background);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.c2 {
+  border: none;
+  border-radius: 10px;
+  border: 1.5px solid #fff;
+  padding: 0.5rem;
+  background-color: #fff;
+}
+
+.c3 {
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  border: 1.5px solid #fff;
+  padding: 0.5rem;
+  background-color: var(--background);
+  font-weight: 600;
+  -webkit-transition: filter 0.2s;
+  transition: filter 0.2s;
+}
+
+.c3:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+.c3 [disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.c4 a {
+  color: #fff;
+}
+
+<main
+  class="c0"
+>
+  <form
+    autocomplete="off"
+    class="c1"
+    data-testid="form-login"
+  >
+    <h1>
+      Retro Achievements PS4
+    </h1>
+    <input
+      class="c2"
+      data-testid="input-login"
+      placeholder="Digite seu usúario"
+      value=""
+    />
+    <button
+      class="c3"
+      data-testid="button-login"
+      disabled=""
+    >
+      Acessar
+    </button>
+    <span
+      class="c4"
+    >
+      Seu usuário no
+       
+      <a
+        href="https://retroachievements.org/"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Retro Achievements
+      </a>
+    </span>
+  </form>
+</main>
+`;
