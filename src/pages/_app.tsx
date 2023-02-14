@@ -1,4 +1,5 @@
 import { GlobalStyles } from '@/styles/global';
+import { AuthProvider } from '@/context/AuthContext';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
@@ -15,8 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
           content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
         />
       </Head>
-      <GlobalStyles />
-      <Component {...pageProps} />
+      <AuthProvider>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </AuthProvider>
     </>
   );
 }

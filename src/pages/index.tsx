@@ -1,10 +1,8 @@
-import { Main } from '@/components/Main';
+import { Login } from '@/components/Login';
+import { AuthContext } from '@/context/AuthContext';
+import { useContext } from 'react';
 
 export default function Home() {
-  return (
-    <Main
-      title="boilerplate"
-      description="TypeScript, ReactJS, NextJS e Styled Components"
-    />
-  );
+  const { user } = useContext(AuthContext);
+  return <>{user.length ? 'usuário logado' : <Login />}</>;
 }

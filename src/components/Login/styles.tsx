@@ -3,9 +3,14 @@ import styled from 'styled-components';
 export const Wrapper = styled.main`
   background-color: var(--background);
   color: #fff;
-  padding: 2.5rem;
+  padding: 5rem;
 
   text-align: center;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const FormLogin = styled.form`
@@ -19,6 +24,7 @@ export const FormLogin = styled.form`
   justify-content: center;
 
   padding: 1rem;
+  width: 500px;
 `;
 
 export const InputLogin = styled.input`

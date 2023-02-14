@@ -1,27 +1,14 @@
-import { FormEvent, useState } from 'react';
+import { AuthContext } from '@/context/AuthContext';
+import { FormEvent, useContext, useState } from 'react';
 import * as S from './styles';
 
 export const Login = () => {
   const [usuario, setUsuario] = useState<string>('');
-  const [isLogin, setIsLogin] = useState<boolean>();
+  const { login } = useContext(AuthContext);
 
   const handleForm = (event: FormEvent) => {
     event.preventDefault();
-    const keyUsuarioRetroLocalstorage = 'usuarioRetro';
-    const usuarioRetroLocalstorage = localStorage.getItem(
-      keyUsuarioRetroLocalstorage
-    );
-
-    setIsLogin(!usuarioRetroLocalstorage);
-
-    if (isLogin) {
-      throw new Error('Usuário já logado');
-    }
-    if (!usuario.length) {
-      throw new Error('Parâmetro login vazio');
-    }
-
-    localStorage.setItem(keyUsuarioRetroLocalstorage, usuario);
+    login(usuario);
   };
   return (
     <S.Wrapper>
